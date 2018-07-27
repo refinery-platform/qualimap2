@@ -21,7 +21,7 @@ install:
     - pip install -r requirements.txt
 script:
     - planemo lint
-    - planemo test --shed_dependency_resolution
+    - planemo test --install_galaxy --galaxy_branch $GALAXY_BRANCH --shed_dependency_resolution --shed_install --no_cache_galaxy
 after_success:
     - planemo shed_update --check_diff --shed_target toolshed --shed_email $SHED_EMAIL --shed_password $SHED_PASSWORD
 notifications:

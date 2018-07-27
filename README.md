@@ -5,4 +5,4 @@ Galaxy Qualimap 2 is a platform-independent application written in Java and R th
 ### Testing with [planemo](https://planemo.readthedocs.io/en/latest/)
 
 - `pip install planemo`
-- `planemo test --shed_dependency_resolution`
+- `planemo test --install_galaxy  --shed_dependency_resolution --shed_install`
