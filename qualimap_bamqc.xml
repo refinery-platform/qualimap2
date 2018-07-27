@@ -48,10 +48,8 @@
               <has_text text="Qualimap Report: BAM QC" />
             </assert_contents>
           </output>
-          <output name="qualimap_raw_data_results">
-            <assert_contents>
-              <has_text text="" />
-            </assert_contents>
+          <output name="raw_data_qualimapReport" ftype="zip">
+            <metadata name="name" value="raw_data_qualimapReport.zip" />
           </output>
         </test>
     </tests>
