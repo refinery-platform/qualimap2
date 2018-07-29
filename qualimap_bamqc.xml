@@ -34,7 +34,9 @@
             </assert_contents>
           </output>
           <output name="raw_data_qualimapReport" ftype="zip">
-            <metadata name="name" value="raw_data_qualimapReport.zip" />
+            <assert_contents>
+              <has_text text="" />
+            </assert_contents>
           </output>
         </test>
     </tests>
