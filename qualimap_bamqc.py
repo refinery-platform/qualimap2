@@ -34,16 +34,21 @@ def main():
     parser.add_argument('--java_mem_size')
 
     args = parser.parse_args()
-
+    
+    # Run qualimap
     qualimap_bamqc(args.input_file, args.java_mem_size)
-
+    
+    # Create .zip archive containing the raw_data_qualimapReport files
     shutil.make_archive(
         'raw_data_qualimapReport',
         'zip',
         os.path.join(QUALIMAP_OUPUT_DIR, 'raw_data_qualimapReport')
     )
-
+    
+    # Move newly created .zip to it's proper Galaxy output file 
     shutil.move("raw_data_qualimapReport.zip", args.out_zip)
+    
+    # Move genome_results.txt to it's proper Galaxy output file 
     shutil.move(
         os.path.join(QUALIMAP_OUPUT_DIR, "genome_results.txt"),
         args.out_results
