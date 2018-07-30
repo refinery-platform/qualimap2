@@ -23,7 +23,7 @@ script:
     - planemo lint
     - planemo test --conda_auto_install --conda_auto_init --conda_ensure_channels bioconda --galaxy_branch $GALAXY_BRANCH --no_cache_galaxy
 after_success:
-    - planemo shed_update --check_diff --shed_target toolshed --shed_email $SHED_EMAIL --shed_password $SHED_PASSWORD
+    - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then planemo shed_update --check_diff --shed_target toolshed --shed_email $SHED_EMAIL --shed_password $SHED_PASSWORD; fi
 notifications:
     email:
         recipients:
