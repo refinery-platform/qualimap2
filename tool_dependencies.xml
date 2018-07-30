@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <tool_dependency>
     <package name="qualimap" version="2.2">
-        <repository toolshed="http://testtoolshed.g2.bx.psu.edu" changeset_revision="21698ad1bfb1" name="package_qualimap_2_2" owner="sanbi-uwc" />
+        <repository name="package_qualimap_2_2" owner="refinery-platform" />
     </package>
 </tool_dependency>
