@@ -10,3 +10,6 @@ Galaxy Qualimap 2 is a platform-independent application written in Java and R th
 
 - `pip install -r requirements.txt`
 - `planemo test --conda_auto_install --conda_auto_init --conda_ensure_channels bioconda`
+
+### SLURM configuration:
+`<tool destination="slum_memory" id="https://toolshed.g2.bx.psu.edu/repos/refinery-platform/qualimap2_bamqc/qualimap" />`
